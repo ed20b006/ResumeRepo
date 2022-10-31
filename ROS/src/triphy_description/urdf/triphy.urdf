@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<robot name="triphy">
+
+    <link name="base_link">
+        <inertial>
+            <origin xyz="0.011929893629028214 -0.12417265806002732 0.00038771483055319837" rpy="0 0 0" />
+            <mass value="14.720676679869584" />
+            <inertia ixx="0.030677" iyy="0.079743" izz="0.104287" ixy="1e-06" iyz="0.0" ixz="0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="steel_satin" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="left_front_wheel_1">
+        <inertial>
+            <origin xyz="-4.28705915767047e-07 -0.018229601651608474 -1.2455162495356121e-06" rpy="0 0 0" />
+            <mass value="0.8568981459003895" />
+            <inertia ixx="0.000766" iyy="0.001271" izz="0.000766" ixy="-0.0" iyz="0.0" ixz="0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="0.098252 0.204175 -0.000388" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/left_front_wheel_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="steel_satin" />
+        </visual>
+        <collision>
+            <origin xyz="0.098252 0.204175 -0.000388" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/left_front_wheel_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_front_wheel_1">
+        <inertial>
+            <origin xyz="-4.3062168929297595e-07 0.018229704641904612 -1.245516250465966e-06" rpy="0 0 0" />
+            <mass value="0.8568981459003895" />
+            <inertia ixx="0.000766" iyy="0.001271" izz="0.000766" ixy="-0.0" iyz="-0.0" ixz="-0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="0.098252 0.041675 -0.000388" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/right_front_wheel_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="steel_satin" />
+        </visual>
+        <collision>
+            <origin xyz="0.098252 0.041675 -0.000388" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/right_front_wheel_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_back_wheel_1">
+        <inertial>
+            <origin xyz="-1.6621689566398423e-08 0.01822970464190459 -1.2455162503860603e-06" rpy="0 0 0" />
+            <mass value="0.8568981459003895" />
+            <inertia ixx="0.000766" iyy="0.001271" izz="0.000766" ixy="-0.0" iyz="-0.0" ixz="-0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.08122 0.041675 -0.000388" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/right_back_wheel_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="steel_satin" />
+        </visual>
+        <collision>
+            <origin xyz="-0.08122 0.041675 -0.000388" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/right_back_wheel_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="left_back_wheel_1">
+        <inertial>
+            <origin xyz="-1.4705916054347234e-08 -0.018229601651608418 -1.2455162496466344e-06" rpy="0 0 0" />
+            <mass value="0.8568981459003895" />
+            <inertia ixx="0.000766" iyy="0.001271" izz="0.000766" ixy="-0.0" iyz="0.0" ixz="0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.08122 0.204175 -0.000388" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/left_back_wheel_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="steel_satin" />
+        </visual>
+        <collision>
+            <origin xyz="-0.08122 0.204175 -0.000388" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/left_back_wheel_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="quadcopter_1">
+        <inertial>
+            <origin xyz="-6.71855465168153e-07 -4.609495171163658e-05 0.04462059830510489" rpy="0 0 0" />
+            <mass value="0.9337764135491435" />
+            <inertia ixx="0.006534" iyy="0.005828" izz="0.011754" ixy="-0.0" iyz="-0.0" ixz="0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.011933 0.124175 -0.025388" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/quadcopter_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="steel_satin" />
+        </visual>
+        <collision>
+            <origin xyz="-0.011933 0.124175 -0.025388" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/quadcopter_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_front_prop_1">
+        <inertial>
+            <origin xyz="-2.541351261931002e-07 -2.1389182681269547e-07 -0.0038275514381761883" rpy="0 0 0" />
+            <mass value="0.03695381718216458" />
+            <inertia ixx="3e-06" iyy="0.00017" izz="0.000172" ixy="1.8e-05" iyz="0.0" ixz="-0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="0.146968 -0.034737 -0.110132" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/right_front_prop_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="steel_satin" />
+        </visual>
+        <collision>
+            <origin xyz="0.146968 -0.034737 -0.110132" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/right_front_prop_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="left_front_prop_1">
+        <inertial>
+            <origin xyz="5.556822157970487e-08 -3.458230823927266e-08 -0.0038275514381743148" rpy="0 0 0" />
+            <mass value="0.03695381718216458" />
+            <inertia ixx="3e-06" iyy="0.00017" izz="0.000172" ixy="1.8e-05" iyz="0.0" ixz="-0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="0.146979 0.283076 -0.110132" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/left_front_prop_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="steel_satin" />
+        </visual>
+        <collision>
+            <origin xyz="0.146979 0.283076 -0.110132" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/left_front_prop_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_back_prop_1">
+        <inertial>
+            <origin xyz="5.665553542699708e-07 9.581152338872245e-08 -0.003827551438176119" rpy="0 0 0" />
+            <mass value="0.03695381718216458" />
+            <inertia ixx="3e-06" iyy="0.00017" izz="0.000172" ixy="1.8e-05" iyz="0.0" ixz="-0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.170844 -0.034726 -0.110132" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/right_back_prop_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="steel_satin" />
+        </visual>
+        <collision>
+            <origin xyz="-0.170844 -0.034726 -0.110132" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/right_back_prop_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="left_back_prop_1">
+        <inertial>
+            <origin xyz="-1.2374129285119828e-07 2.7512104106008906e-07 -0.003827551438174162" rpy="0 0 0" />
+            <mass value="0.03695381718216458" />
+            <inertia ixx="3e-06" iyy="0.00017" izz="0.000172" ixy="1.8e-05" iyz="0.0" ixz="-0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.170834 0.283087 -0.110132" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/left_back_prop_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="steel_satin" />
+        </visual>
+        <collision>
+            <origin xyz="-0.170834 0.283087 -0.110132" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://triphy_description/meshes/left_back_prop_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="w_left_front_rev" type="continuous">
+        <origin xyz="-0.098252 -0.204175 0.000388" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="left_front_wheel_1" />
+        <axis xyz="0.0 -1.0 0.0" />
+        <dynamics damping="0.7" friction="1.0" />
+    </joint>
+
+    <joint name="w_right_front_rev" type="continuous">
+        <origin xyz="-0.098252 -0.041675 0.000388" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="right_front_wheel_1" />
+        <axis xyz="-0.0 1.0 -0.0" />
+    </joint>
+
+    <joint name="w_right_back_rev" type="continuous">
+        <origin xyz="0.08122 -0.041675 0.000388" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="right_back_wheel_1" />
+        <axis xyz="-0.0 1.0 -0.0" />
+    </joint>
+
+    <joint name="w_left_back_rev" type="continuous">
+        <origin xyz="0.08122 -0.204175 0.000388" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="left_back_wheel_1" />
+        <axis xyz="0.0 -1.0 0.0" />
+    </joint>
+
+    <joint name="Rigid" type="fixed">
+        <origin xyz="0.011933 -0.124175 0.025388" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="quadcopter_1" />
+    </joint>
+
+    <joint name="p_right_front_rev" type="continuous">
+        <origin xyz="-0.158901 0.158912 0.084744" rpy="0 0 0" />
+        <parent link="quadcopter_1" />
+        <child link="right_front_prop_1" />
+        <axis xyz="-0.0 0.0 1.0" />
+    </joint>
+
+    <joint name="p_left_front_rev" type="continuous">
+        <origin xyz="-0.158912 -0.158901 0.084744" rpy="0 0 0" />
+        <parent link="quadcopter_1" />
+        <child link="left_front_prop_1" />
+        <axis xyz="-0.0 0.0 1.0" />
+    </joint>
+
+    <joint name="p_right_back_rev" type="continuous">
+        <origin xyz="0.158911 0.158901 0.084744" rpy="0 0 0" />
+        <parent link="quadcopter_1" />
+        <child link="right_back_prop_1" />
+        <axis xyz="-0.0 0.0 1.0" />
+    </joint>
+
+    <joint name="p_left_back_rev" type="continuous">
+        <origin xyz="0.158901 -0.158912 0.084744" rpy="0 0 0" />
+        <parent link="quadcopter_1" />
+        <child link="left_back_prop_1" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+
+    <!--                GAZEBO RELATED PART                             -->
+
+    <!-- ROS Control plugin for Gazebo. This allows Gazebo and Ros to to be connected,
+        and for ros to control the model in the gazebo visualization -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <!--this is the namespace in the yaml file-->
+            <robotNamespace>/triphy_controller</robotNamespace>
+            <!--The two lines below came from: https://answers.ros.org/question/292444/gazebo_ros_control-plugin-gazeboroscontrolplugin-missing-legacymodens-defaultrobothwsim/-->
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+            <legacyModeNS>true</legacyModeNS>
+        </plugin>
+    </gazebo>
+
+    <!-- transmission is the ability to define the ros controller used to control the joint. -->
+
+    <transmission name="w_left_front_rev_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="w_left_front_rev">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="w_left_front_rev_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="w_right_front_rev_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="w_right_front_rev">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="w_right_front_rev_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="w_right_back_rev_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="w_right_back_rev">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="w_right_back_rev_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="w_left_back_rev_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="w_left_back_rev">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="w_left_back_rev_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="p_right_front_rev_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="p_right_front_rev">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="p_right_front_rev_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="p_left_front_rev_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="p_left_front_rev">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="p_left_front_rev_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="p_right_back_rev_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="p_right_back_rev">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="p_right_back_rev_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="p_left_back_rev_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="p_left_back_rev">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="p_left_back_rev_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+
+</robot>

@@ -1,0 +1,39 @@
+triphy_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  w_left_front_rev_position_controller:
+    type: effort_controllers/JointVelocityController
+    joint: w_left_front_rev
+    pid: {p: 0.1, i: 0.0, d: 0.0}
+  w_right_front_rev_position_controller:
+    type: effort_controllers/JointVelocityController
+    joint: w_right_front_rev
+    pid: {p: 0.1, i: 0.0, d: 0.0}
+  w_right_back_rev_position_controller:
+    type: effort_controllers/JointVelocityController
+    joint: w_right_back_rev
+    pid: {p: 0.1, i: 0.0, d: 0.0}
+  w_left_back_rev_position_controller:
+    type: effort_controllers/JointVelocityController
+    joint: w_left_back_rev
+    pid: {p: 0.1, i: 0.0, d: 0.0}
+  p_right_front_rev_position_controller:
+    type: effort_controllers/JointVelocityController
+    joint: p_right_front_rev
+    pid: {p: 0.1, i: 0.0, d: 0.0}
+  p_left_front_rev_position_controller:
+    type: effort_controllers/JointVelocityController
+    joint: p_left_front_rev
+    pid: {p: 0.1, i: 0.0, d: 0.0}
+  p_right_back_rev_position_controller:
+    type: effort_controllers/JointVelocityController
+    joint: p_right_back_rev
+    pid: {p: 0.1, i: 0.0, d: 0.0}
+  p_left_back_rev_position_controller:
+    type: effort_controllers/JointVelocityController
+    joint: p_left_back_rev
+    pid: {p: 0.1, i: 0.0, d: 0.0}

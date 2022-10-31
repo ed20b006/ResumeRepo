@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <!-- add the Gazebo world so that we launch it all together-->
+    <arg name="model" default="$(find triphy_description)/urdf/triphy.urdf"/>
+    <arg name="world" default="empty"/> 
+    <arg name="paused" default="true"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+    <arg name="verbose" value="true"/>
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find triphy_description)/worlds/triphy.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <!--by activating "verbose" mode, Gazebo prints more to terminal on launch.-->
+    <arg name="verbose" value="$(arg verbose)"/>
+    </include>
+
+    <!--load urdf into parameter server-->
+    <param name="robot_description" textfile="$(find triphy_description)/urdf/triphy.urdf" />
+
+	
+    <node name="urdf_spawner" 
+          pkg="gazebo_ros" 
+          type="spawn_model" 
+          respawn="false" 
+          output="screen" 
+          args="-urdf -model triphy -param robot_description"/>
+
+    <!-- load the controllers -->
+    
+    <rosparam file="$(find triphy_description)/config/config.yaml" command="load"/>
+
+    <node name="controller_spawner" 
+          pkg ="controller_manager" 
+          type="spawner" 
+          ns="/triphy_controller" 
+          args="w_left_front_rev_position_controller w_right_front_rev_position_controller w_right_back_rev_position_controller w_left_back_rev_position_controller p_right_front_rev_position_controller p_left_front_rev_position_controller p_right_back_rev_position_controller p_left_back_rev_position_controller joint_state_controller "/>
+    
+	<!-- converts joint states to TF transforms -->
+    
+    <node name="robot_state_publisher" 
+          pkg="robot_state_publisher" 
+          type="robot_state_publisher" 
+          respawn="false" 
+          output="screen">
+        <remap from="joint_states" to="/triphy/joint_states" />
+    </node>
+    
+</launch>
