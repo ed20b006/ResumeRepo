@@ -1,8 +1,0 @@
-prefix=/home/its-ak15/Desktop/virat_ws/install
-
-Name: virat_gazebo
-Description: Description of virat_gazebo
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
