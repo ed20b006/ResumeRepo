@@ -1,0 +1,2 @@
+virat_description:virat_gazebo:virat_potholes:virat_teleop
+-DCATKIN_DEVEL_PREFIX=/home/its-ak15/Desktop/virat_ws/devel -DCMAKE_INSTALL_PREFIX=/home/its-ak15/Desktop/virat_ws/install -G Unix Makefiles
